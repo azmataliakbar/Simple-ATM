@@ -1,7 +1,6 @@
 {
-  "name": "6z0m9t-simple-atm",
+  "name": "6z0m9t-simple-atm-01",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -18,5 +17,6 @@
     "@types/chalk-animation": "^1.6.3",
     "@types/inquirer": "^9.0.7",
     "chalk-animation": "^2.0.3"
-  }
+  },
+  "description": ""
 }
