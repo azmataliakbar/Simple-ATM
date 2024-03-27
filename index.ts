@@ -39,7 +39,7 @@ let pinAnswer = await inquirer.prompt(
 
 if (pinAnswer.pin === myPin) {
   
-console.log(rainbowText("It is Correct PIN number!!!"));
+console.log(rainbowText("\nIt is Correct PIN number!!!"));
 
 let operationAns = await inquirer.prompt(
   [
@@ -73,30 +73,36 @@ console.log(chalk.greenBright.italic.bold.underline("\nYour Remaining Balance is
 
       //console.log(operationAns);
 
-  }else if (operationAns.operation === "Withdraw Amount") {
+  } else if (operationAns.operation === "Withdraw Amount") {
 
 let amountAns = await inquirer.prompt(
   [
       {
         name: "amount",
-        message: chalk.yellowBright.italic.bold("\nEnter Your Required Amount"),
+        message: chalk.yellowBright.italic.bold("\nEnter Your Required Withdraw Amount."),
         type: "number"
       }
 
   ]
 );
 
+if (amountAns.amount <= myBalance) {
+
        //console.log(amountAns.amount);
       // =, -=, +=
 
 myBalance -= amountAns.amount;
 
-console.log(chalk.greenBright.italic.bold.underline("\nYour Remaining Balance is: " + myBalance));
+console.log(chalk.greenBright.italic.bold.underline("\nNow Your Remaining Balance is: " + myBalance));
 
-} else if (operationAns.operation === "Check Balance") {
+} else {
+  console.log(chalk.greenBright.italic.bold.underline("\nYou have Insufficient Balance"));
+  
+}
+
+} if (operationAns.operation === "Check Balance") {
 
 console.log(chalk.greenBright.italic.bold.underline("\nYour Balance is: " + myBalance));
-
 }
 
 } else {
@@ -105,10 +111,11 @@ console.log(chalk.magentaBright.italic.bold.underline("\nYou Entered Incorrect P
 
 }
 
+
 const currentDateTime = new Date();
 const currentDate = currentDateTime.toLocaleDateString();
 const currentTime = currentDateTime.toLocaleTimeString();
 
 console.log(rainbowText(`\nTransaction Date:${currentDate} & Time:${currentTime}`));
 
-console.log(rainbowText("\nThanks for choosing Meezan Bank ATM.Visit soon, Have a good day!"))
+console.log(rainbowText("\nThanks for choosing Karachi Bank ATM.Visit soon, Have a good day!"))
