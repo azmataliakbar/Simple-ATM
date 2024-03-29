@@ -1,4 +1,4 @@
-Simple-ATM
+This is a Simple ATM
 <br>
 Author : Azmat Ali
 <br>
