@@ -1,3 +1,3 @@
 # Simple-ATM
 <br>
-# Author : Azmat Ali
+Author : Azmat Ali
