@@ -1,7 +1,7 @@
-# Simple-ATM
-<br>
+Simple-ATM
+
 This is a Simple ATM
-<br>
+
 Author : Azmat Ali
-<br>
+
 Project : 3.0
